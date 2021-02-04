@@ -27,5 +27,6 @@ salario = gets.chomp
 
 # to_i para inteiro
 # to_f para float
+# to_s para string
 puts salario.to_i
 puts salario.to_f
