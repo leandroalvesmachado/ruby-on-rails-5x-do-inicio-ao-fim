@@ -116,3 +116,23 @@ Adicione as gems que deseja instalar no arquivo
 - gem 'cpf_utils'
 - gem 'faker'
 ```
+
+## RAILS
+
+#### Scaffold
+
+```sh
+$ rails generate scaffold Coin description:string acronym:string url_image:string
+```
+
+```sh
+$ rails generate scaffold Coin description acronym url_image (Por padrão o tipo string)
+```
+
+```sh
+$ RAILS_ENV=production rails s (Com as confs de produção)
+```
+
+```sh
+$ rails s -e production (Com as confs de produção)
+```
