@@ -2,6 +2,9 @@
 
 Curso Ruby on Rails 5.x - Do início ao fim
 
+## Ambiente
+
+
 ## RVM
 
 #### Listar todas as versões disponíveis no repositório
@@ -136,3 +139,12 @@ $ RAILS_ENV=production rails s (Com as confs de produção)
 ```sh
 $ rails s -e production (Com as confs de produção)
 ```
+
+* Embedded Ruby - #{} (mesclar texto, por exemplo html com ruby) extensão .html.erb
+
+* Helpers são métodos prontos que podem ser usados nas views, facilitam a vida do programador, por exemplo o link_to
+
+#### ROUTES
+
+* Para listar as rotas da aplicação: Ex: http://localhost:3000/rails/info/routes
+

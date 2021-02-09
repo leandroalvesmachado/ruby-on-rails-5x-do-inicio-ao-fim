@@ -1,2 +1,25 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Seja Bem-vindo!</h1>
+<p><strong>Data:</strong> <%= data_br(Date.today) %></p>
+<%= nome_aplicacao %>
+
+<%# ERB %>
+<!-- 
+<p>A some é <%= 1 + 1 %></p>
+<p>Seu nome de trás pra frente é: <%= "Leandro".reverse %> </p>
+
+<% ax = "minha variavel a" %>
+<p>Imprimindo a variavel a: <%= ax %></p>
+
+<ul>
+    <li>
+        <a href="">Cadastro de Moedas</a>
+        <%= link_to "Cadastro de Moedas", coins_path %>
+    </li>
+</ul>
+-->
+
+<ul>
+    <li>
+        <%= link_to "Cadastro de Moedas", coins_path %>
+    </li>
+</ul>
