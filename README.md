@@ -148,3 +148,9 @@ $ rails s -e production (Com as confs de produção)
 
 * Para listar as rotas da aplicação: Ex: http://localhost:3000/rails/info/routes
 
+#### PARTIALS
+
+* Permitem renderizar uma view dentro de outra
+* Ex: _menu.html.erb
+* Perceba o _ "underline" no início do nome do arquivo
+
