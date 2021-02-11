@@ -154,3 +154,11 @@ $ rails s -e production (Com as confs de produção)
 * Ex: _menu.html.erb
 * Perceba o _ "underline" no início do nome do arquivo
 
+#### TASKS
+
+* Cria uma task no lib/tasks/dev.rake no exemplo abaixo
+```sh
+$ rails g task dev setup (Comando para criar a task no terminla, rails dev:setup)
+```
+
+
