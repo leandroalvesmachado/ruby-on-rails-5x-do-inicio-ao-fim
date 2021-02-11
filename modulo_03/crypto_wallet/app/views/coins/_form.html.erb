@@ -1,3 +1,4 @@
+<!-- local:true para formulario local, caso false seria via ajax(formulario remoto) -->
 <%= form_with(model: coin, local: true) do |form| %>
   <% if coin.errors.any? %>
     <div id="error_explanation">

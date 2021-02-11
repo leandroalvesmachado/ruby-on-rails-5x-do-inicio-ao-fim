@@ -1,4 +1,9 @@
 class CoinsController < ApplicationController
+  # informando qual layout utilizar views/layouts/admin.html.erb
+  # por padr]ao é o application.html.erb
+  # layout "adm"
+  
+  # filtros, setando uma coin (def set_coin) antes dos metodos show,edit, update, destroy
   before_action :set_coin, only: %i[ show edit update destroy ]
 
   # GET /coins or /coins.json
@@ -63,6 +68,7 @@ class CoinsController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
+    # metodo que captura os parametros, usado no metodo creare por exemplo
     def coin_params
       params.require(:coin).permit(:description, :acronym, :url_image)
     end
