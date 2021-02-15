@@ -140,6 +140,10 @@ $ RAILS_ENV=production rails s (Com as confs de produção)
 $ rails s -e production (Com as confs de produção)
 ```
 
+```sh
+$ rails d scaffold MiningType (desfazer scaffold)
+```
+
 * Embedded Ruby - #{} (mesclar texto, por exemplo html com ruby) extensão .html.erb
 
 * Helpers são métodos prontos que podem ser usados nas views, facilitam a vida do programador, por exemplo o link_to
@@ -158,7 +162,6 @@ $ rails s -e production (Com as confs de produção)
 
 * Cria uma task no lib/tasks/dev.rake no exemplo abaixo
 ```sh
-$ rails g task dev setup (Comando para criar a task no terminla, rails dev:setup)
+$ rails g task dev setup (Comando para criar a task no terminal, rails dev:setup)
 ```
-
 
