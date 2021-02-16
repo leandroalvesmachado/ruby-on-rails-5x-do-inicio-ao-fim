@@ -1,5 +1,11 @@
 <h1>Seja Bem-vindo!</h1>
-<p><strong>Data:</strong> <%= data_br(Date.today) %></p>
+<p>O idioma usado nessa aplicação é: <strong><%= locale(I18n.locale) %></strong></p>
+
+<!-- formatando data com helper -->
+<!-- <p><strong>Data:</strong> <%= data_br(Date.today) %></p> -->
+
+<!-- Uso do i18n para formatar a data automaticamente -->
+<p><strong>Data:</strong> <%= Date.today %></p>
 
 <!-- Partials Menu -->
 <%= render 'menu' %>

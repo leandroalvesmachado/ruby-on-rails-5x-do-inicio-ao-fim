@@ -12,4 +12,8 @@ module ApplicationHelper
             "Teste"
         end
     end
+
+    def locale(locale)
+        I18n.locale == :en ? "Estados Unidos" : "Português do Brasil"
+    end
 end

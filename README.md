@@ -165,3 +165,20 @@ $ rails d scaffold MiningType (desfazer scaffold)
 $ rails g task dev setup (Comando para criar a task no terminal, rails dev:setup)
 ```
 
+## METODOS
+
+* Método .map retorna sempre um array no final com as colunas escolhidas (uma coleção em array aplicando algo a todos os elementos)
+* Ex: c.map { |coin| coin.description } = c.map(&:description) (retona um array com os valores da chave description)
+* Ex: c.map { |coin| [coin.description, coin.acronym] }  (retorna um de array de arrays, [ ["Bitcoin", "BTC"], ["Dash", "DSH"] ])
+* Método .pluck, Ex: c.pluck(:description) -> retorna um array com as descriptions
+* Método .pluck, Ex: c.pluck(:description, :acronym) -> retorna um array de arrays ([ ["Bitcoin", "BTC"], ["Dash", "DSH"] ])
+
+## YAML
+ 
+ * É um formato de serialização (codificação de dados) de dados legíveis por humanos
+ * Utiliza a indentação, não aceita tabs (somente espaços)
+ * Se baseia no espaçamento e quebra de linhas
+
+ ## I18N
+
+ * I18n é a "sigla" para internacionalization (18 letras)

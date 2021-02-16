@@ -5,6 +5,7 @@ class CoinsController < ApplicationController
   
   # filtros, setando uma coin (def set_coin) antes dos metodos show,edit, update, destroy
   before_action :set_coin, only: %i[ show edit update destroy ]
+  before_action :set_mining_type_options, only: [:new, :create, :edit, :update]
 
   # GET /coins or /coins.json
   def index
@@ -70,6 +71,10 @@ class CoinsController < ApplicationController
     # Only allow a list of trusted parameters through.
     # metodo que captura os parametros, usado no metodo creare por exemplo
     def coin_params
-      params.require(:coin).permit(:description, :acronym, :url_image)
+      params.require(:coin).permit(:description, :acronym, :url_image, :mining_type_id)
+    end
+
+    def set_mining_type_options
+      @mining_type_options = MiningType.all.pluck(:description, :id)
     end
 end

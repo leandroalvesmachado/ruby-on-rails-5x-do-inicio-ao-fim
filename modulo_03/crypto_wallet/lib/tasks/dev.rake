@@ -57,8 +57,10 @@ namespace :dev do
             # end
 
             # chamando agora a task
-            %x(rails dev:add_coins)
+            # alterando ordem pois as coins precisam de um mining_type
             %x(rails dev:add_mining_types)
+            %x(rails dev:add_coins)
+            
 
             # quando o codigo é somente uma linha, pode ser assim
             # show_spinner("Populando as tabelas....") { %x(rails db:seed) }
@@ -69,23 +71,29 @@ namespace :dev do
 
     desc "Cadastra as moedas"
     task add_coins: :environment do
+        # mining_type: MiningType.all.sample sorteia um mining type existente
         if Rails.env.development?
             show_spinner("Cadastrando moedas....") do
                 coins = [
                     {
                         description: 'Bitcoin',
                         acronym: 'BTC',
-                        url_image: 'https://img2.gratispng.com/20180324/tre/kisspng-bitcoin-cryptocurrency-logo-zazzle-ethereum-bitcoin-5ab6e422d6fc54.3809289415219353948806.jpg'
+                        url_image: 'https://img2.gratispng.com/20180324/tre/kisspng-bitcoin-cryptocurrency-logo-zazzle-ethereum-bitcoin-5ab6e422d6fc54.3809289415219353948806.jpg',
+                        # mining_type: MiningType.all.sample
+                        # mining_type: MiningType.where(acronym: 'PoW').first
+                        mining_type: MiningType.find_by(acronym: 'PoW')
                     },
                     {
                         description: 'Ethereum',
                         acronym: 'ETH',
-                        url_image: 'https://img.favpng.com/8/11/1/logo-ethereum-bitcoin-vector-graphics-portable-network-graphics-png-favpng-ej52fCZ1rTD6Zn7dLNtBzbSR0.jpg'
+                        url_image: 'https://img.favpng.com/8/11/1/logo-ethereum-bitcoin-vector-graphics-portable-network-graphics-png-favpng-ej52fCZ1rTD6Zn7dLNtBzbSR0.jpg',
+                        mining_type: MiningType.all.sample
                     },
                     {
                         description: 'Dash',
                         acronym: 'DASH',
-                        url_image: 'https://media.dash.org/wp-content/uploads/dash-d.png'
+                        url_image: 'https://media.dash.org/wp-content/uploads/dash-d.png',
+                        mining_type: MiningType.all.sample
                     }
                 ]
 
