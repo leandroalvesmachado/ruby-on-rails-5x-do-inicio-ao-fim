@@ -1,10 +1,16 @@
 <h1>Seja Bem-vindo!</h1>
-<p>O idioma usado nessa aplicação é: <strong><%= locale(I18n.locale) %></strong></p>
+<p>O idioma usado nessa aplicação é: <strong><%= locale %></strong></p>
+
+<!-- Buscando tradução no arquivo config/locales/*.yml-->
+<!-- t = translate -->
+<p><%= I18n.t('abc') %></p>
+
 
 <!-- formatando data com helper -->
 <!-- <p><strong>Data:</strong> <%= data_br(Date.today) %></p> -->
 
-<!-- Uso do i18n para formatar a data automaticamente -->
+<!-- l = locale -->
+<p><strong>Data:</strong> <%= I18n.l(Date.today) %></p>
 <p><strong>Data:</strong> <%= Date.today %></p>
 
 <!-- Partials Menu -->
