@@ -175,10 +175,23 @@ $ rails g task dev setup (Comando para criar a task no terminal, rails dev:setup
 
 ## YAML
  
- * É um formato de serialização (codificação de dados) de dados legíveis por humanos
- * Utiliza a indentação, não aceita tabs (somente espaços)
- * Se baseia no espaçamento e quebra de linhas
+* É um formato de serialização (codificação de dados) de dados legíveis por humanos
+* Utiliza a indentação, não aceita tabs (somente espaços)
+* Se baseia no espaçamento e quebra de linhas
 
- ## I18N
+## I18N
 
- * I18n é a "sigla" para internacionalization (18 letras)
+* I18n é a "sigla" para internacionalization (18 letras)
+
+## ASSETS
+
+* app/assets: para assets criados pelo próprio Rails
+* lib/assets: para assets que você mesmo criou
+* vendor/assets: para assets que você "pegou" de terceiros
+
+## REQUIRE TREE
+
+* Carrega todos os js que estao na mesma pasta, Removendo pois essa abordagem vai carregar um js para cada controller 
+* //= require_tree 
+* Carrega todos os css que estao na mesma pasta, Removendo pois essa abordagem vai carregar um css para cada controller 
+* *= require_tree .
