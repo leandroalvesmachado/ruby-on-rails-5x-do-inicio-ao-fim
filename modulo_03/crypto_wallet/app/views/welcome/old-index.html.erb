@@ -1,0 +1,43 @@
+<p><%= link_to 'Portugês', root_path(locale: 'pt-BR') %></p>
+<p><%= link_to 'English', root_path(locale: 'en') %></p>
+
+<h1>Seja Bem-vindo!</h1>
+<!--<p>O idioma usado nessa aplicação é: <strong><%= locale %></strong></p>-->
+<p>O idioma usado nessa aplicação é: <strong><%= t('actual_locale') %></strong></p>
+
+
+<!-- Buscando tradução no arquivo config/locales/*.yml-->
+<!-- t = translate -->
+<p><%= I18n.t('abc') %></p>
+
+
+<!-- formatando data com helper -->
+<!-- <p><strong>Data:</strong> <%= data_br(Date.today) %></p> -->
+
+<!-- l = locale -->
+<p><strong>Data:</strong> <%= I18n.l(Date.today) %></p>
+<p><strong>Data:</strong> <%= Date.today %></p>
+
+<!-- Partials Menu -->
+<%= render 'menu' %>
+<!-- Partials Menu -->
+
+<p>Você está em ambiente de <strong><%= ambiente_rails %></strong></p>
+<p>Eu sou uma variável de instância/sessão <strong><%= @nome %></strong></p>
+<p>Eu sou uma query params <strong><%= @nome_params %></strong></p>
+
+<%# ERB %>
+<!-- 
+<p>A some é <%= 1 + 1 %></p>
+<p>Seu nome de trás pra frente é: <%= "Leandro".reverse %> </p>
+
+<% ax = "minha variavel a" %>
+<p>Imprimindo a variavel a: <%= ax %></p>
+
+<ul>
+    <li>
+        <a href="">Cadastro de Moedas</a>
+        <%= link_to "Cadastro de Moedas", coins_path %>
+    </li>
+</ul>
+-->
