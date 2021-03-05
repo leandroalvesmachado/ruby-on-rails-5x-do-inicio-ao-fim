@@ -122,6 +122,11 @@ Adicione as gems que deseja instalar no arquivo
 
 ## RAILS
 
+* Cria uma nova aplicação sem incluir os arquivos de testes gerados automaticamente
+```sh
+$ rails new testeapp -T
+```
+
 #### Scaffold
 
 ```sh
@@ -195,3 +200,17 @@ $ rails g task dev setup (Comando para criar a task no terminal, rails dev:setup
 * //= require_tree 
 * Carrega todos os css que estao na mesma pasta, Removendo pois essa abordagem vai carregar um css para cada controller 
 * *= require_tree .
+
+#### SPRING (Algumas mudanças só tem efeito com esses comandos)
+
+* Memoria do rails (preload)
+
+* Status do spring
+```sh
+$ spring status
+```
+
+* Stop do spring
+```sh
+$ spring stop
+```
